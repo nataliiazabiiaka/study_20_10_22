@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class RecipeBundle {
+class RecipeBundel {
   final int id, chefs, recipes;
   final String title, description, imageSrc;
   final Color color;
 
-  RecipeBundle(
-  {required this.id,
-    required this.chefs,
-    required this.recipes,
+  RecipeBundel(
+  { required this.id,
+     required this.chefs,
+     required this.recipes,
     required this.title,
-    required this.description,
-    required this.imageSrc,
-    required this.color});
+     required this.description,
+     required this.imageSrc,
+     required this.color});
 }
 
-List<RecipeBundle> recipeBundles = [
-  RecipeBundle(
+List<RecipeBundel> recipeBundles = [
+  RecipeBundel(
       id: 1,
       chefs: 16,
       recipes: 95,
@@ -25,7 +25,7 @@ List<RecipeBundle> recipeBundles = [
       imageSrc: 'assets/images/cook_new@2x.png',
       color: const Color(0xFFD82D40),
   ),
-  RecipeBundle(
+  RecipeBundel(
     id: 2,
     chefs: 8,
     recipes: 26,
@@ -34,7 +34,7 @@ List<RecipeBundle> recipeBundles = [
     imageSrc: 'assets/images/best_2020@2x.png',
     color: const Color(0xFF90AF17),
   ),
-  RecipeBundle(
+  RecipeBundel(
     id: 3,
     chefs: 10,
     recipes: 43,
