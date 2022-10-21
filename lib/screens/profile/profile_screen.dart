@@ -1,3 +1,4 @@
+import 'package:study_20_10_22/screens/components/body.dart';
 import 'package:flutter/material.dart';
 import 'package:study_20_10_22/components%20/my_bottom_nav_bar.dart';
 import 'package:study_20_10_22/constants.dart';
@@ -10,13 +11,23 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      appBar: AppBar(
+      appBar: buildAppBar(),
+      body: Body(),
+      bottomNavigationBar: MyBottomNavBar(),
+    );
+  }
+
+
+
+
+      AppBar buildAppBar() {
+      return AppBar(
         backgroundColor: kPrimaryColor,
         leading: const SizedBox(),
         centerTitle: true,
-        title: Text('Profile'),
+        title: const Text('Profile'),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: () {},
             child: Text(
                 'Edit',
@@ -27,8 +38,6 @@ class ProfileScreen extends StatelessWidget {
             ),),
           )
         ],
-      ),
-      bottomNavigationBar: MyBottomNavBar(),
-    );
+      );
   }
 }

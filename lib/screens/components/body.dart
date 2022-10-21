@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_20_10_22/models/RecipeBundel.dart';
-import 'package:study_20_10_22/screens/components/recipe_bungel_card.dart';
+import 'package:study_20_10_22/screens/components/recipe_bundel_card.dart';
 import 'package:study_20_10_22/size_config.dart';
 import 'categories.dart';
 

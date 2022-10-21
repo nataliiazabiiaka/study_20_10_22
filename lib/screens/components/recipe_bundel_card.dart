@@ -13,10 +13,10 @@ class RecipeBundelCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double defaultSize = SizeConfig.defaultSize;
     return GestureDetector(
-      onTap: press,
+      onTap: press (),
       child: Container(
           decoration: BoxDecoration(
-            color: recipeBundles.color,
+            color: recipeBundle.color,
             borderRadius: BorderRadius.circular(defaultSize * 1.8),
           ),
           child: Row(
@@ -29,7 +29,7 @@ class RecipeBundelCard extends StatelessWidget {
                     children: <Widget>[
                       const Spacer(),
                       Text(
-                        recipeBundles.title,
+                        recipeBundle.title,
                         style: TextStyle(
                           fontSize: defaultSize * 2.2,
                           color: Colors.white,
@@ -39,7 +39,7 @@ class RecipeBundelCard extends StatelessWidget {
                       ),
                       SizedBox(height: defaultSize * 0.5),
                       Text(
-                        recipeBundles.description,
+                        recipeBundle.description,
                         style: const TextStyle(
                             color: Colors.white54),
                         maxLines: 2,
@@ -49,13 +49,13 @@ class RecipeBundelCard extends StatelessWidget {
                       buildInfoRow(
                         defaultSize,
                         iconScr: 'assets/icons/pot.svg',
-                        text: '${recipeBundles.recipes} Recipes',
+                        text: '${recipeBundle.recipes} Recipes',
                       ),
                       SizedBox(height: defaultSize * 0.5),
                       buildInfoRow(
                         defaultSize,
                         iconScr: 'assets/icons/chef.svg',
-                        text: '${recipeBundles.chefs} Chefs',
+                        text: '${recipeBundle.chefs} Chefs',
                       ),
                       const Spacer(),
                     ],
@@ -66,7 +66,7 @@ class RecipeBundelCard extends StatelessWidget {
               AspectRatio(
                 aspectRatio: 0.71,
                 child: Image.asset(
-                  recipeBundles.imageSrc,
+                  recipeBundle.imageSrc,
                   fit: BoxFit.cover,
                   alignment: Alignment.centerLeft,
                 ),
@@ -74,7 +74,6 @@ class RecipeBundelCard extends StatelessWidget {
             ],
           ),
         ),
-    ),
     );
   }
 }

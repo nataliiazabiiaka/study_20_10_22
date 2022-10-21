@@ -7,7 +7,7 @@
   static double defaultSize;
   static Orientation orientation;
 
-  void int(BuildContext context) {
+  void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = -_mediaQueryData.size.height;
