@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+
 import '../../constants.dart';
 import '../../size_config.dart';
-
 
 class Categories extends StatefulWidget {
   const Categories({Key? key}) : super(key: key);
 
   @override
-  _CategoriesState createState() => _CategoriesState();
+  State<Categories> createState() => _CategoriesState();
 }
 
 class _CategoriesState extends State<Categories> {
   List<String> categories = ['All', 'Indian', 'Italian', 'Mexican', 'Chinese'];
   int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -38,13 +39,14 @@ class _CategoriesState extends State<Categories> {
       child: Container(
         alignment: Alignment.center,
         margin: EdgeInsets.only(left: SizeConfig.defaultSize * 2),
-        padding:EdgeInsets.symmetric(
+        padding: EdgeInsets.symmetric(
           horizontal: SizeConfig.defaultSize * 2,
           vertical: SizeConfig.defaultSize * 0.5,
         ),
         decoration: BoxDecoration(
-          color:
-          selectedIndex == index ? Color(0xFFEFF3EE) : Colors.transparent,
+          color: selectedIndex == index
+              ? const Color(0xFFEFF3EE)
+              : Colors.transparent,
           borderRadius: BorderRadius.circular(
             SizeConfig.defaultSize * 1.6,
           ),
@@ -53,7 +55,9 @@ class _CategoriesState extends State<Categories> {
           categories[index],
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: selectedIndex == index ? kPrimaryColor : Color(0xFFC2C2B5),
+            color: selectedIndex == index
+                ? kPrimaryColor
+                : const Color(0xFFC2C2B5),
           ),
         ),
       ),

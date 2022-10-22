@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:study_20_10_22/screens/profile/components/profile_menu_item.dart';
-import 'package:study_20_10_22/size_config.dart';
+
+import '../../../size_config.dart';
 import 'info.dart';
+import 'profile_menu_item.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class Body extends StatelessWidget {
             name: 'Jhon Doe',
             email: 'Jhondoe01@gmail.com',
           ),
-          SizedBox(height:  SizeConfig.defaultSize * 2),
+          SizedBox(height: SizeConfig.defaultSize * 2),
           ProfileMenuItem(
             iconSrc: 'assets/icons/bookmark_fill.svg',
             title: 'Saved Recipes',
@@ -42,5 +43,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
-

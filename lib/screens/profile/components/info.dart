@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class Info extends StatelessWidget {
-  const Info({Key? key, required this.name, required this.email, required this.image}) : super(key: key);
+  const Info(
+      {Key? key, required this.name, required this.email, required this.image})
+      : super(key: key);
 
   final String name, email, image;
 
@@ -67,15 +70,13 @@ class Info extends StatelessWidget {
   }
 }
 
-
-
-class CustomShape extends CustomClipper<Path>{
+class CustomShape extends CustomClipper<Path> {
   @override
-  Path getClip (Size size) {
+  Path getClip(Size size) {
     var path = Path();
     double height = size.height;
     double width = size.width;
-    path.lineTo(0, height -100);
+    path.lineTo(0, height - 100);
     path.quadraticBezierTo(width / 2, height, width, height - 100);
     path.lineTo(width, 0);
     path.close();

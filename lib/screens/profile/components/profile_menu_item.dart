@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class ProfileMenuItem extends StatelessWidget {
-  const ProfileMenuItem({Key? key, required this.iconSrc, required this.title, required this.press}) : super(key: key);
+  const ProfileMenuItem(
+      {Key? key,
+      required this.iconSrc,
+      required this.title,
+      required this.press})
+      : super(key: key);
   final String iconSrc, title;
   final Function press;
 
@@ -12,11 +18,11 @@ class ProfileMenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     double defaultSize = SizeConfig.defaultSize;
     return InkWell(
-      onTap: press (),
+      onTap: press(),
       child: Padding(
         padding: EdgeInsets.symmetric(
-            horizontal: defaultSize * 2,
-            vertical: defaultSize * 3
+          horizontal: defaultSize * 2,
+          vertical: defaultSize * 3,
         ),
         child: SafeArea(
           child: Row(
